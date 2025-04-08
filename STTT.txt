@@ -1,0 +1,14 @@
+# Create a directory for the binaries if it doesn't exist
+mkdir -p ~/bin
+export PATH=~/bin:$PATH
+
+# Download repo tool
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+
+# Make it executable
+chmod a+x ~/bin/repo
+export PATH=~/bin:$PATH
+source ~/.bashrc
+# or
+source ~/.zshrc
+repo init --help
