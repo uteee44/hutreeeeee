@@ -9,9 +9,10 @@ sudo apt update && sudo apt install -y \
     repo android-sdk-ext4-utils
 
 
-sudo apt install -y \
-    git-core gnupg flex bison build-essential \
-    zip curl zlib1g-dev gcc-multilib g++-multilib \
-    libc6-dev-i386 lib32ncurses-dev x11proto-core-dev \
-    libx11-dev lib32z-dev ccache libgl1-mesa-dev \
-    libxml2-utils xsltproc unzip fontconfig
+sudo apt install build-essential
+wget http://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.gz
+tar -xvzf bison-3.8.2.tar.gz
+cd bison-3.8.2
+./configure
+make
+sudo make install
